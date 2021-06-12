@@ -48,6 +48,7 @@
   { Berechnen Button
     MoveScaled(2,31,66,4)
     Text = ("Berechnen")
+    Picture = Picture["Ohm.png"]
   }
   { Ergebnis Label
     MoveScaled(25,6,20,4)
