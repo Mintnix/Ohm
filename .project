@@ -1,0 +1,14 @@
+# Gambas Project File 3.0
+Title=Widerstandsrechner - Ohm
+Startup=FMain
+Icon=Ohm.png
+Version=0.0.1
+Component=gb.image
+Component=gb.gui
+Component=gb.form
+Description="Einfache Erkennung von Metallfilm- und Kohleschicht-Widerständen durch diesen einfachen Rechner, mittels des Farbcodes."
+Authors="Mintnix"
+TabSize=2
+Language=de
+Vendor=Mintnix
+Packager=1

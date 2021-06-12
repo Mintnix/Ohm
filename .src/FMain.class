@@ -1,0 +1,227 @@
+' Gambas class file
+
+' Vorarbeiten hier hin schreiben
+
+''Variablen deklarieren, hier???'''''''''''''''''''''''
+'Public sDateimanager As String      'Zeile 1
+Public sText As String
+
+Public Ring1 As Float
+Public Ring2 As Float
+Public Ring3 As Float
+Public Ring4 As Float
+Public Ring5 As Float
+Public schwarz As String
+Public braun As String
+
+
+
+'globale Variablen sind Static - mit Fmain. aufrufen
+'Static Public sGlobal1 As String    'Zeile 5    -  eigener Dateimanager
+
+
+'Was nach dem Programmstart passieren soll
+Public Sub Form_Open()
+  
+  If Radio4Ringe.Enabled = True Then ComboBox3.Enabled = False 
+  'If Radio5Ringe.Enabled = True Then ComboBox3.Enabled = True
+
+  
+ComboBox5.Text = "keine Farbe"
+
+ComboBox1.Tooltip = "erster Ring - Zähler"
+ComboBox2.Tooltip = "zweiter Ring - Zähler"
+ComboBox3.Tooltip = "deaktiviert"
+ComboBox4.Tooltip = "dritter Ring - Multiplikator"
+ComboBox5.Tooltip = "vierter Ring - zulässige Abweichung des Widerstandswertes"
+
+'TextLabel5.Background = Color.Black
+'TextLabel6.Background = Color.orange
+'TextLabel7.Background = 5000000000000000
+'TextLabel8.Background = 50
+'TextLabel9.Background = 99
+
+
+  
+  
+   
+   
+   
+ End
+
+
+
+Public Sub Berechnen_Click()
+
+'Ring 1
+
+  If ComboBox1.Text = "schwarz" Then Ring1 = 0 
+  If ComboBox1.Text = "braun" Then Ring1 = 1
+  If ComboBox1.Text = "rot" Then Ring1 = 2
+  If ComboBox1.Text = "orange" Then Ring1 = 3
+  If ComboBox1.Text = "gelb" Then Ring1 = 4
+  If ComboBox1.Text = "grün" Then Ring1 = 5
+  If ComboBox1.Text = "blau" Then Ring1 = 6
+  If ComboBox1.Text = "violett" Then Ring1 = 7
+  If ComboBox1.Text = "grau" Then Ring1 = 8
+  If ComboBox1.Text = "weiß" Then Ring1 = 9
+ 
+ If Ring1 = 0 Then ComboBox1.Background = 0
+ If Ring1 = 1 Then ComboBox1.Background = Color.DarkOrange
+ If Ring1 = 2 Then ComboBox1.Background = 16711680
+ If Ring1 = 3 Then ComboBox1.Background = 16744448
+ If Ring1 = 4 Then ComboBox1.Background = 16776960
+ If Ring1 = 5 Then ComboBox1.Background = 65280
+ If Ring1 = 6 Then ComboBox1.Background = 255
+ If Ring1 = 7 Then ComboBox1.Background = 8388863
+ If Ring1 = 8 Then ComboBox1.Background = 8421504
+ If Ring1 = 9 Then ComboBox1.Background = 16777215
+  
+ 
+'Ring 2
+  
+  If ComboBox2.Text = "schwarz" Then Ring2 = 0
+  If ComboBox2.Text = "braun" Then Ring2 = 1
+  If ComboBox2.Text = "rot" Then Ring2 = 2
+  If ComboBox2.Text = "orange" Then Ring2 = 3
+  If ComboBox2.Text = "gelb" Then Ring2 = 4
+  If ComboBox2.Text = "grün" Then Ring2 = 5
+  If ComboBox2.Text = "blau" Then Ring2 = 6
+  If ComboBox2.Text = "violett" Then Ring2 = 7
+  If ComboBox2.Text = "grau" Then Ring2 = 8
+  If ComboBox2.Text = "weiß" Then Ring2 = 9
+  
+ If Ring2 = 0 Then ComboBox2.Background = 0
+ If Ring2 = 1 Then ComboBox2.Background = Color.DarkOrange
+ If Ring2 = 2 Then ComboBox2.Background = 16711680
+ If Ring2 = 3 Then ComboBox2.Background = 16744448
+ If Ring2 = 4 Then ComboBox2.Background = 16776960
+ If Ring2 = 5 Then ComboBox2.Background = 65280
+ If Ring2 = 6 Then ComboBox2.Background = 255
+ If Ring2 = 7 Then ComboBox2.Background = 8388863
+ If Ring2 = 8 Then ComboBox2.Background = 8421504
+ If Ring2 = 9 Then ComboBox2.Background = 16777215
+  
+  
+  'Ring 3
+  
+  If ComboBox3.Text = "schwarz" Then Ring3 = 0
+  If ComboBox3.Text = "braun" Then Ring3 = 1
+  If ComboBox3.Text = "rot" Then Ring3 = 2
+  If ComboBox3.Text = "orange" Then Ring3 = 3
+  If ComboBox3.Text = "gelb" Then Ring3 = 4
+  If ComboBox3.Text = "grün" Then Ring3 = 5
+  If ComboBox3.Text = "blau" Then Ring3 = 6
+  If ComboBox3.Text = "violett" Then Ring3 = 7
+  If ComboBox3.Text = "grau" Then Ring3 = 8
+  If ComboBox3.Text = "weiß" Then Ring3 = 9
+ 
+  
+ If Ring3 = 0 Then ComboBox3.Background = 0
+ If Ring3 = 1 Then ComboBox3.Background = Color.DarkOrange
+ If Ring3 = 2 Then ComboBox3.Background = 16711680
+ If Ring3 = 3 Then ComboBox3.Background = 16744448
+ If Ring3 = 4 Then ComboBox3.Background = 16776960
+ If Ring3 = 5 Then ComboBox3.Background = 65280
+ If Ring3 = 6 Then ComboBox3.Background = 255
+ If Ring3 = 7 Then ComboBox3.Background = 8388863
+ If Ring3 = 8 Then ComboBox3.Background = 8421504
+ If Ring3 = 9 Then ComboBox3.Background = 16777215
+ 
+  
+  'Ring 4 Multiplikator
+  
+  If ComboBox4.Text = "silber" Then Ring4 = 10 ^ -2
+  If ComboBox4.Text = "gold" Then Ring4 = 10 ^ -1
+  If ComboBox4.Text = "schwarz" Then Ring4 = 10 ^ 0
+  If ComboBox4.Text = "braun" Then Ring4 = 10 ^ 1
+  If ComboBox4.Text = "rot" Then Ring4 = 10 ^ 2
+  If ComboBox4.Text = "orange" Then Ring4 = 10 ^ 3
+  If ComboBox4.Text = "gelb" Then Ring4 = 10 ^ 4
+  If ComboBox4.Text = "grün" Then Ring4 = 10 ^ 5
+  If ComboBox4.Text = "blau" Then Ring4 = 10 ^ 6
+  If ComboBox4.Text = "violett" Then Ring4 = 10 ^ 7
+  If ComboBox4.Text = "grau" Then Ring4 = 10 ^ 8
+  If ComboBox4.Text = "weiß" Then Ring4 = 10 ^ 9
+  
+  If ComboBox4.Text = "silber" Then ComboBox4.Background = &H00C4C4C4&
+  If ComboBox4.Text = "gold" Then ComboBox4.Background = &H00E7C429&
+  If ComboBox4.Text = "schwarz" Then ComboBox4.Background = 0
+  If ComboBox4.Text = "braun" Then ComboBox4.Background = Color.DarkOrange
+  If ComboBox4.Text = "rot" Then ComboBox4.Background = 16711680
+  If ComboBox4.Text = "orange" Then ComboBox4.Background = 16744448
+  If ComboBox4.Text = "gelb" Then ComboBox4.Background = 16776960
+  If ComboBox4.Text = "grün" Then ComboBox4.Background = 65280
+  If ComboBox4.Text = "blau" Then ComboBox4.Background = 255
+  If ComboBox4.Text = "violett" Then ComboBox4.Background = 8388863
+  If ComboBox4.Text = "grau" Then ComboBox4.Background = 8421504
+  If ComboBox4.Text = "weiß" Then ComboBox4.Background = 16777215
+  
+  'Ring 5 Toleranz
+  
+  If ComboBox5.Text = "silber" Then Ring5 = 10
+  If ComboBox5.Text = "gold" Then Ring5 = 5
+  If ComboBox5.Text = "braun" Then Ring5 = 1
+  If ComboBox5.Text = "rot" Then Ring5 = 2
+  If ComboBox5.Text = "grün" Then Ring5 = 0.5
+  If ComboBox5.Text = "blau" Then Ring5 = 0.25
+  If ComboBox5.Text = "violett" Then Ring5 = 0.1
+  If ComboBox5.Text = "keine Farbe" Then Ring5 = 20
+  
+  If ComboBox5.Text = "silber" Then ComboBox5.Background = &H00C4C4C4&
+  If ComboBox5.Text = "gold" Then ComboBox5.Background = &H00E7C429&
+  If ComboBox5.Text = "braun" Then ComboBox5.Background = Color.DarkOrange
+  If ComboBox5.Text = "rot" Then ComboBox5.Background = 16711680
+  If ComboBox5.Text = "grün" Then ComboBox5.Background = 65280
+  If ComboBox5.Text = "blau" Then ComboBox5.Background = 255
+  If ComboBox5.Text = "violett" Then ComboBox5.Background = 8388863
+  If ComboBox5.Text = "keine Farbe" Then ComboBox5.Background = -1
+  
+  
+  ''''''''''''''''''''''''''''''''''''
+   
+  '' eigentliche Berechnung
+  
+If ComboBox3.Enabled = False Then  
+  Ergebnis.Text = (Ring1 & Ring2 * Ring4)
+ Else 
+     Ergebnis.Text = (Ring1 & Ring2 & Ring3 * Ring4)
+    
+Endif
+
+Ergebnis2.Text = (Ergebnis.Text / 1000)
+Ergebnis3.Text = (Ergebnis2.Text / 1000)
+Ergebnis4.Text = (Ring5)
+  If ComboBox3.Enabled = False Then ComboBox3.Background = -1
+  
+  
+
+
+
+End
+
+Public Sub Radio5Ringe_Click()
+
+  If Radio5Ringe.Enabled = True Then ComboBox3.Enabled = True
+  ComboBox3.Tooltip = "dritter Ring - Zähler"
+  ComboBox4.Tooltip = "vierter Ring - Multiplikator"
+  ComboBox5.Tooltip = "fünfte Ring - zulässige Abweichung des Widerstandswertes"
+
+End
+
+Public Sub Radio4Ringe_Click()
+
+   If Radio4Ringe.Enabled = True Then ComboBox3.Enabled = False
+   ComboBox3.Tooltip = "deaktiviert"
+   ComboBox4.Tooltip = "dritter Ring - Multiplikator"
+   ComboBox5.Tooltip = "vierter Ring - zulässige Abweichung des Widerstandswertes"
+   If ComboBox3.Enabled = False Then ComboBox3.Background = -1
+   ComboBox3.Text = ""
+   
+   
+End
+
+
+
+
+

@@ -1,0 +1,100 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(50,50,70,37)
+  Background = &HE5FFF5&
+  Icon = Picture["Ohm.png"]
+  TakeFocus = False
+  Centered = True
+  { Radio4Ringe RadioButton
+    MoveScaled(3,1,11,3)
+    Text = ("4 Ringe")
+    Value = True
+  }
+  { ComboBox1 ComboBox
+    MoveScaled(2,6,22,4)
+    ReadOnly = True
+    List = [("schwarz"), ("braun"), ("rot"), ("orange"), ("gelb"), ("grün"), ("blau"), ("violett"), ("grau"), ("weiß")]
+    Text = ("Ring 1")
+  }
+  { ComboBox2 ComboBox
+    MoveScaled(2,11,22,4)
+    ReadOnly = True
+    List = [("schwarz"), ("braun"), ("rot"), ("orange"), ("gelb"), ("grün"), ("blau"), ("violett"), ("grau"), ("weiß")]
+    Text = ("Ring 2")
+  }
+  { ComboBox3 ComboBox
+    MoveScaled(2,16,22,4)
+    ReadOnly = True
+    List = [("schwarz"), ("braun"), ("rot"), ("orange"), ("gelb"), ("grün"), ("blau"), ("violett"), ("grau"), ("weiß")]
+    Text = ("Ring 3")
+  }
+  { ComboBox4 ComboBox
+    MoveScaled(2,21,22,4)
+    ReadOnly = True
+    List = [("silber"), ("gold"), ("schwarz"), ("braun"), ("rot"), ("orange"), ("gelb"), ("grün"), ("blau"), ("violett"), ("grau"), ("weiß")]
+    Text = ("Multiplikator")
+  }
+  { ComboBox5 ComboBox
+    MoveScaled(2,26,22,4)
+    ReadOnly = True
+    List = [("silber"), ("gold"), ("braun"), ("rot"), ("grün"), ("blau"), ("violett"), ("keine Farbe")]
+    Text = ("Toleranz")
+  }
+  { Radio5Ringe RadioButton
+    MoveScaled(14,1,11,3)
+    Text = ("5 Ringe")
+  }
+  { Berechnen Button
+    MoveScaled(2,31,66,4)
+    Text = ("Berechnen")
+  }
+  { Ergebnis Label
+    MoveScaled(25,6,20,4)
+    Alignment = Align.Center
+    Border = Border.Plain
+    Text = ("Ergebnis")
+  }
+  { Ergebnis2 Label
+    MoveScaled(25,11,20,4)
+    Alignment = Align.Center
+    Border = Border.Plain
+    Text = ("Ergebnis")
+  }
+  { Ergebnis3 Label
+    MoveScaled(25,16,20,4)
+    Alignment = Align.Center
+    Border = Border.Plain
+    Text = ("Ergebnis")
+  }
+  { Ergebnis4 Label
+    MoveScaled(25,26,20,4)
+    Alignment = Align.Center
+    Border = Border.Plain
+    Text = ("Ergebnis")
+  }
+  { TextLabel1 TextLabel
+    MoveScaled(46,6,22,4)
+    Border = Border.Plain
+    Text = ("Ergebnis in Ohm")
+    Alignment = Align.Center
+  }
+  { TextLabel2 TextLabel
+    MoveScaled(46,11,22,4)
+    Border = Border.Plain
+    Text = ("Ergebnis in Kilo-Ohm")
+    Alignment = Align.Center
+  }
+  { TextLabel3 TextLabel
+    MoveScaled(46,16,22,4)
+    Border = Border.Plain
+    Text = ("Ergebnis in Mega-Ohm")
+    Alignment = Align.Center
+  }
+  { TextLabel4 TextLabel
+    MoveScaled(46,26,22,4)
+    Border = Border.Plain
+    Text = ("+/- Toleranz in %")
+    Alignment = Align.Center
+  }
+}
